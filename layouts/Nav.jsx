@@ -4,7 +4,7 @@ import { Link } from 'react-router'
 export default class Nav extends React.Component {
 
   render() {
-    let root = '/admin';
+    const ROOT = '/admin';
 
     return (
       <aside id="Nav">
@@ -12,28 +12,28 @@ export default class Nav extends React.Component {
           <ul>
             <li>
               <i className="fa fa-home" />
-              <Link to={root + '/'}>home</Link>
+              <Link to={ROOT + '/'}>home</Link>
             </li>
 
             <li>
               <i className="fa fa-film" />
-              <Link to={root + '/pixi'}>pixi.js</Link>
+              <Link to={ROOT + '/pixi'}>pixi.js</Link>
             </li>
 
             <li>
               <i className="fa fa-film" />
-              <Link to={root + '/anime'}>anime.js</Link>
+              <Link to={ROOT + '/anime'}>anime.js</Link>
             </li>
 
             <li>
               <i className="fa fa-server" />
-              <Link to={root + '/async'}>async</Link>
+              <Link to={ROOT + '/async'}>async</Link>
             </li>
 
             <li className="l-Nav-external">
               <i className="fa fa-link" />
               <a
-                href={root + '/sass/sample/index.html'}
+                href={ROOT + '/sass/sample/index.html'}
                 target="_blank"
                 >
                 sass
