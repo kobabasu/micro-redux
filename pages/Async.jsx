@@ -1,6 +1,8 @@
 import React from 'react'
 import DocumentTitle from 'react-document-title'
 
+import Header from '../layouts/Header'
+
 import Api from '../containers/Api'
 
 export default class Async extends React.Component {

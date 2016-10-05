@@ -1,6 +1,8 @@
 import React from 'react'
 import DocumentTitle from 'react-document-title'
 
+import Header from '../layouts/Header'
+
 import anime from 'animejs'
 
 export default class Anime extends React.Component {

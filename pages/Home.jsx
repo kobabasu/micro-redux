@@ -1,6 +1,8 @@
 import React from 'react'
 import DocumentTitle from 'react-document-title'
 
+import Header from '../layouts/Header'
+
 import Form from '../containers/Form'
 
 export default class Home extends React.Component {

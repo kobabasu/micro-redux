@@ -1,6 +1,8 @@
 import React from 'react'
 import DocumentTitle from 'react-document-title'
 
+import Header from '../layouts/Header'
+
 import PIXI from '../components/PixiExtends'
 
 export default class Pixi extends React.Component {
