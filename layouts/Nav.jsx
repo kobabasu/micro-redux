@@ -11,27 +11,27 @@ export default class Nav extends React.Component {
         <nav>
           <ul>
             <li>
-              <i className="fa fa-home" />
+              <i className="material-icons">home</i>
               <Link to={ROOT + '/'}>home</Link>
             </li>
 
             <li>
-              <i className="fa fa-film" />
+              <i className="material-icons">local_movies</i>
               <Link to={ROOT + '/pixi'}>pixi.js</Link>
             </li>
 
             <li>
-              <i className="fa fa-film" />
+              <i className="material-icons">local_movies</i>
               <Link to={ROOT + '/anime'}>anime.js</Link>
             </li>
 
             <li>
-              <i className="fa fa-server" />
+              <i className="material-icons">autorenew</i>
               <Link to={ROOT + '/async'}>async</Link>
             </li>
 
             <li className="l-Nav-external">
-              <i className="fa fa-link" />
+              <i className="material-icons">link</i>
               <a
                 href={ROOT + '/sass/sample/index.html'}
                 target="_blank"
