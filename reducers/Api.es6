@@ -1,3 +1,5 @@
+import ES6ObjectAssign from 'es6-object-assign'
+ES6ObjectAssign.polyfill();
 import '../actions/Api'
 
 const obj = {
