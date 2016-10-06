@@ -1,8 +1,6 @@
 import React from 'react'
 import DocumentTitle from 'react-document-title'
 
-import Header from '../layouts/Header'
-
 import anime from 'animejs'
 
 export default class Anime extends React.Component {
@@ -23,7 +21,10 @@ export default class Anime extends React.Component {
     return(
       <article id="Anime">
         <DocumentTitle title={this.title} />
-        <Header h1={this.title} md={this.md} />
+        <h1>
+          <i className="material-icons md-36">{this.md}</i>
+          {this.title}
+        </h1>
 
         <div className="bgcolor-brand-primary"></div>
         <div className="bgcolor-brand-info"></div>

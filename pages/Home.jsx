@@ -1,8 +1,6 @@
 import React from 'react'
 import DocumentTitle from 'react-document-title'
 
-import Header from '../layouts/Header'
-
 import Form from '../containers/Form'
 
 export default class Home extends React.Component {
@@ -17,7 +15,10 @@ export default class Home extends React.Component {
     return(
       <article id="Home">
         <DocumentTitle title={this.title} />
-        <Header h1={this.title} md={this.md} />
+        <h1>
+          <i className="material-icons md-36">{this.md}</i>
+          {this.title}
+        </h1>
 
         <p>Adipisicing modi repellat distinctio incidunt corporis! Ullam neque debitis dolorem harum sit quia? Inventore recusandae totam aliquid iusto numquam, neque, sit Unde repellat blanditiis ad ullam optio suscipit Rem necessitatibus</p>
 

@@ -1,8 +1,6 @@
 import React from 'react'
 import DocumentTitle from 'react-document-title'
 
-import Header from '../layouts/Header'
-
 import PIXI from '../components/PixiExtends'
 
 export default class Pixi extends React.Component {
@@ -55,7 +53,6 @@ export default class Pixi extends React.Component {
         className="l-TwoColumn-article-fillout"
         >
         <DocumentTitle title={this.title} />
-        <Header h1={this.title} md={this.md} />
 
         <div id="Board"></div>
       </article>
