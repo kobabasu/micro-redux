@@ -6,7 +6,7 @@ import * as action from '../actions/Api'
 class Api extends React.Component {
 
   componentDidMount() {
-    this.props.load();
+    this.props.get();
   }
 
   render() {
@@ -14,11 +14,16 @@ class Api extends React.Component {
       <div>{this.props.api.value}</div>
     );
   }
+
+  del(e) {
+    this.props.del(e.target.id);
+  }
 }
 
 Api.propTypes = {
   value: React.PropTypes.array,
-  load: React.PropTypes.func.isRequired
+  get: React.PropTypes.func.isRequired,
+  del: React.PropTypes.func.isRequired
 };
 
 const mapStateToProps = (state) => {
@@ -31,8 +36,11 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return bindActionCreators({
-    load: (value) => dispatch(
-      action.get(dispatch, value)
+    get: () => dispatch(
+      HolidaysAction.get(dispatch)
+    ),
+    del: (id) => dispatch(
+      HolidaysAction.del(dispatch, id)
     )
   }, dispatch);
 };

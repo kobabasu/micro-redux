@@ -9,6 +9,7 @@ const obj = {
 const reducer = (state = obj, action) => {
   switch (action.type) {
     case 'GET':
+    case 'DEL':
       return Object.assign({}, state, {
           value: action.value
       });

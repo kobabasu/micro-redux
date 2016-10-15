@@ -30,6 +30,8 @@ export default class Nav extends React.Component {
               <Link to={ROOT + '/async'}>async</Link>
             </li>
 
+            <hr />
+
             <li className="l-Nav-external">
               <i className="material-icons">link</i>
               <a
