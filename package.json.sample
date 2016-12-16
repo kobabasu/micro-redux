@@ -25,6 +25,7 @@
     "react-document-title": "*",
     "redux": "*",
     "react-redux": "*",
+    "redux-saga": "*",
     "react-router-redux": "*",
     "moment": "*",
     "pixi.js": "*",
