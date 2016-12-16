@@ -19,5 +19,12 @@
   <div id="root"></div>
   
   <script src="/dist/build.js"></script>
+
+  <!--script>
+    document.onkeydown = function(e) {
+      document.body.style.height = 'auto';
+      (e.which == 71) ? document.body.classList.toggle('grid') : '';
+    };
+  </script-->
 </body>
 </html>
