@@ -5,6 +5,12 @@ import PIXI from '../components/PixiExtends'
 
 export default class Pixi extends React.Component {
 
+  constructor(props) {
+    super(props);
+    this.title = 'Pixi';
+    this.md = 'local_movies';
+  }
+
   componentDidMount() {
     const el = document.getElementById('Board');
     PIXI.setElement(el);
@@ -46,7 +52,8 @@ export default class Pixi extends React.Component {
         id="Pixi"
         className="l-TwoColumn-article-fillout"
         >
-        <DocumentTitle title="pixi.js" />
+        <DocumentTitle title={this.title} />
+
         <div id="Board"></div>
       </article>
     );

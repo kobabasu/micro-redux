@@ -4,36 +4,38 @@ import { Link } from 'react-router'
 export default class Nav extends React.Component {
 
   render() {
-    let root = '/admin';
+    const ROOT = '/admin';
 
     return (
       <aside id="Nav">
         <nav>
           <ul>
             <li>
-              <i className="fa fa-home" />
-              <Link to={root + '/'}>home</Link>
+              <i className="material-icons">home</i>
+              <Link to={ROOT + '/'}>home</Link>
             </li>
 
             <li>
-              <i className="fa fa-film" />
-              <Link to={root + '/pixi'}>pixi.js</Link>
+              <i className="material-icons">local_movies</i>
+              <Link to={ROOT + '/pixi'}>pixi.js</Link>
             </li>
 
             <li>
-              <i className="fa fa-film" />
-              <Link to={root + '/anime'}>anime.js</Link>
+              <i className="material-icons">local_movies</i>
+              <Link to={ROOT + '/anime'}>anime.js</Link>
             </li>
 
             <li>
-              <i className="fa fa-server" />
-              <Link to={root + '/async'}>async</Link>
+              <i className="material-icons">autorenew</i>
+              <Link to={ROOT + '/async'}>async</Link>
             </li>
+
+            <hr />
 
             <li className="l-Nav-external">
-              <i className="fa fa-link" />
+              <i className="material-icons">link</i>
               <a
-                href={root + '/sass/sample/index.html'}
+                href={ROOT + '/sass/sample/index.html'}
                 target="_blank"
                 >
                 sass

@@ -5,6 +5,12 @@ import anime from 'animejs'
 
 export default class Anime extends React.Component {
 
+  constructor(props) {
+    super(props);
+    this.title = 'Anime';
+    this.md = 'local_movies';
+  }
+
   componentDidMount() {
   }
 
@@ -14,8 +20,12 @@ export default class Anime extends React.Component {
   render() {
     return(
       <article id="Anime">
-        <DocumentTitle title="anime.js" />
-        <h1>anime.js</h1>
+        <DocumentTitle title={this.title} />
+        <h1>
+          <i className="material-icons md-36">{this.md}</i>
+          {this.title}
+        </h1>
+
         <div className="bgcolor-brand-primary"></div>
         <div className="bgcolor-brand-info"></div>
         <button

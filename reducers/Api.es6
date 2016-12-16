@@ -1,3 +1,5 @@
+import ES6ObjectAssign from 'es6-object-assign'
+ES6ObjectAssign.polyfill();
 import '../actions/Api'
 
 const obj = {
@@ -7,6 +9,7 @@ const obj = {
 const reducer = (state = obj, action) => {
   switch (action.type) {
     case 'GET':
+    case 'DEL':
       return Object.assign({}, state, {
           value: action.value
       });

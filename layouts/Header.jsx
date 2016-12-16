@@ -6,7 +6,7 @@ export default class Header extends React.Component {
   render() {
     return (
       <header id="Header">
-        <span>Header</span>
+        <span>Admin</span>
       </header>
     );
   }
