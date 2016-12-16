@@ -5,11 +5,20 @@ import Form from '../containers/Form'
 
 export default class Home extends React.Component {
 
+  constructor(props) {
+    super(props);
+    this.title = 'Home';
+    this.md = 'home';
+  }
+
   render() {
     return(
       <article id="Home">
-        <DocumentTitle title="Home" />
-        <h1>Home 日本語のタイトル</h1>
+        <DocumentTitle title={this.title} />
+        <h1>
+          <i className="material-icons md-36">{this.md}</i>
+          {this.title}
+        </h1>
 
         <p>Adipisicing modi repellat distinctio incidunt corporis! Ullam neque debitis dolorem harum sit quia? Inventore recusandae totam aliquid iusto numquam, neque, sit Unde repellat blanditiis ad ullam optio suscipit Rem necessitatibus</p>
 

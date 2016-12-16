@@ -11,30 +11,30 @@ import Anime        from './pages/Anime'
 import Async        from './pages/Async'
 import NoMatch      from './pages/NoMatch'
 
-const root = '/admin';
+const ROOT = '/admin';
 
 export default (
   <Route>
-    <Route path={root + '/'} component={Default}>
+    <Route path={ROOT + '/'} component={Default}>
       <IndexRoute 
         components={{
           main: Home
         }} />
 
       <Route 
-        path={root + '/pixi'}
+        path={ROOT + '/pixi'}
         components={{
           main: Pixi
         }} />
 
       <Route 
-        path={root + '/anime'}
+        path={ROOT + '/anime'}
         components={{
           main: Anime
         }} />
 
       <Route 
-        path={root + '/async'}
+        path={ROOT + '/async'}
         components={{
           main: Async
         }} />
