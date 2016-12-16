@@ -17,7 +17,15 @@
     "!win32"
   ],
 
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "gulpjs/gulp.git#4.0",
+    "babel-cli": "*",
+    "babel-core": "*",
+    "babel-preset-es2015": "*",
+    "babel-preset-react": "*",
+    "babelify": "*",
+
     "babel-polyfill": "*",
     "react": "*",
     "react-dom": "*",
@@ -27,17 +35,10 @@
     "react-redux": "*",
     "redux-saga": "*",
     "react-router-redux": "*",
+
     "moment": "*",
     "pixi.js": "*",
     "animejs": "*"
-  },
-  "devDependencies": {
-    "gulp": "gulpjs/gulp.git#4.0",
-    "babel-cli": "*",
-    "babel-core": "*",
-    "babel-preset-es2015": "*",
-    "babel-preset-react": "*",
-    "babelify": "*"
   },
 
   "scripts": {
