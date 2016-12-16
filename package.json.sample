@@ -26,10 +26,6 @@
     "redux": "*",
     "react-redux": "*",
     "react-router-redux": "*",
-    "redux-thunk": "*",
-    "es6-promise": "*",
-    "isomorphic-fetch": "*",
-    "es6-object-assign": "*",
     "moment": "*",
     "pixi.js": "*",
     "animejs": "*"
