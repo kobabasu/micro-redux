@@ -1,4 +1,4 @@
-import { auth } from '../config/settings.json'
+import { auth } from '../config/settings'
 
 const headers = new Headers();
 const USER = auth.user;
