@@ -40,6 +40,7 @@ docker run --net=host --name apache -p 80:80 -p 443:443 -v /home/core/share/app:
 1. http://localhost:8080/src/sample/count -> ボタン表示
 
 ## gulp
+1. gulp/dir.es6.sampleをコピーしgulp/dir.es6を作成
 1. gulp/dir.es6を変更
 1. documentRootでgulp sass:buildを実行し動作するか確認
 1. documentRootのgulpfile.babel.js内で読み込み
