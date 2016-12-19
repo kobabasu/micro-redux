@@ -43,7 +43,7 @@ class React extends DefaultRegistry {
     `]));
 
     gulp.task(prefix + 'browserify', shell.task([`
-      browserify ${src.app} -o ${dir.dist} -v -t \
+      browserify ${src.app} -o ${src.dist} -v -t \
       [ babelify --presets [ es2015 react ] ]
     `]));
 
@@ -81,7 +81,7 @@ class React extends DefaultRegistry {
      */
     gulp.task(prefix + 'src:watch', () => {
       gulp
-        .watch([watch], gulp.series('src'))
+        .watch([src.watch], gulp.series(prefix + 'src'))
         .on('error', err => process.exit(1));
     });
 
