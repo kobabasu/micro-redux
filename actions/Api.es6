@@ -4,22 +4,21 @@ import { init } from '../lib/Fetch'
 const URL = '/admin/api/users/';
 
 // actions
-export const GET = 'GET';
-export const RECEIVE = 'RECEIVE';
+export const GET = 'API_GET';
+export const DEL = 'API_DEL';
+export const RECEIVE = 'API_RECEIVE';
 
 // action creators
-export const get = (dispatch, value) => {
-  dispatch(_get());
+export const get = (value) => {
   return {
     type: GET,
     value
   }; 
 };
 
-export const del = (dispatch, id) => {
-  dispatch(_del(id));
+export const del = (id) => {
   return {
-    type: 'DEL',
+    type: DEL,
     id
   };
 };

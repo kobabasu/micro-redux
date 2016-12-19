@@ -9,6 +9,9 @@ import { dir } from '../dir.es6'
 class React extends DefaultRegistry {
 
   init() {
+    // task名の接頭辞を設定
+    let prefix = (dir.name == '') ? '' : dir.name + ':';
+
     /*
      * src
      */
@@ -23,7 +26,7 @@ class React extends DefaultRegistry {
       ignore: []
     };
 
-    gulp.task('babel', shell.task([`
+    gulp.task(prefix + 'babel', shell.task([`
 
       # 無視するディレクトリのアラート用
       tput setaf 33 && echo "---\n" \
@@ -39,27 +42,27 @@ class React extends DefaultRegistry {
       --ignore ${src.ignore}
     `]));
 
-    gulp.task('browserify', shell.task([`
+    gulp.task(prefix + 'browserify', shell.task([`
       browserify ${src.app} -o ${dir.dist} -v -t \
       [ babelify --presets [ es2015 react ] ]
     `]));
 
-    gulp.task('uglify', shell.task([`
-      uglifyjs -c -o ${min} --source-map ${map} ${dir.dist}
+    gulp.task(prefix + 'uglify', shell.task([`
+      uglifyjs -c -o ${src.min} --source-map ${src.map} ${dir.dist}
     `]));
 
 
-    gulp.task('src',
+    gulp.task(prefix + 'src',
       gulp.series(
-        'babel',
-        'browserify'
+        prefix + 'babel',
+        prefix + 'browserify'
     ));
 
-    gulp.task('src:min',
+    gulp.task(prefix + 'src:min',
       gulp.series(
-        'babel',
-        'browserify',
-        `uglify`
+        prefix + 'babel',
+        prefix + 'browserify',
+        prefix + `uglify`
     ));
 
 
@@ -68,7 +71,7 @@ class React extends DefaultRegistry {
      */
     const docs = {};
 
-    gulp.task('src:docs', shell.task([`
+    gulp.task(prefix + 'src:docs', shell.task([`
       jsdoc ${dir.src} -d ${dir.docs}
     `]));
 
@@ -76,7 +79,7 @@ class React extends DefaultRegistry {
     /*
      * watch
      */
-    gulp.task('src:watch', () => {
+    gulp.task(prefix + 'src:watch', () => {
       gulp
         .watch([watch], gulp.series('src'))
         .on('error', err => process.exit(1));
@@ -86,11 +89,11 @@ class React extends DefaultRegistry {
     /*
      * build
      */
-    gulp.task('src:build',
+    gulp.task(prefix + 'src:build',
       gulp.series(
-        'src',
-        'src:min'
-        // 'admin:src:docs'
+        prefix + 'src',
+        prefix + 'src:min'
+        // prefix + 'admin:src:docs'
     ));
   }
 };

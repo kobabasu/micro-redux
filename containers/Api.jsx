@@ -6,7 +6,7 @@ import * as action from '../actions/Api'
 class Api extends React.Component {
 
   componentDidMount() {
-    this.props.get();
+    // this.props.get();
   }
 
   render() {

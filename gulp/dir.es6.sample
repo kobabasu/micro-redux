@@ -1,13 +1,18 @@
 /**
  * node_modulesが存在するディレクトリからの
  * ドキュメントルートを指定
+ *
+ * nameはtask名の先頭になる
  */
 
 const root = './admin/';
 
 export const dir = {
+  name: 'admin',
+
   root: root,
   src:  root + 'src/',
+  js:   root + 'js/',
   dist: root + 'dist/',
   docs: root + 'docs/src/'
 }
