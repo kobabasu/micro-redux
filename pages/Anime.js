@@ -8,7 +8,7 @@ export default class Anime extends React.Component {
   constructor(props) {
     super(props);
     this.title = 'Anime';
-    this.md = 'local_movies';
+    this.md = 'movie';
   }
 
   componentDidMount() {
@@ -22,7 +22,7 @@ export default class Anime extends React.Component {
       <article id="Anime">
         <DocumentTitle title={this.title} />
         <h1>
-          <i className="material-icons md-36">{this.md}</i>
+          <i className={"zmdi zmdi-"+this.md}></i>
           {this.title}
         </h1>
 

@@ -8,7 +8,7 @@ export default class Async extends React.Component {
   constructor(props) {
     super(props);
     this.title = 'Async';
-    this.md = 'autorenew';
+    this.md = 'refresh-sync';
   }
 
   render() {
@@ -16,7 +16,7 @@ export default class Async extends React.Component {
       <article id="Async">
         <DocumentTitle title={this.title} />
         <h1>
-          <i className="material-icons md-36">{this.md}</i>
+          <i className={"zmdi zmdi-"+this.md}></i>
           {this.title}
         </h1>
 

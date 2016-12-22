@@ -1,11 +1,11 @@
-import PIXI from 'pixi.js'
+import { utils } from 'pixi.js'
 
 let element = null;
 
 export default class Pixi {
 
   constructor() {
-    PIXI.utils._saidHello = true;
+    utils.skipHello();
     
     this.props = {
       loader: null,
