@@ -1,20 +1,17 @@
 import '../actions/Api'
 
 const obj = {
-  value: null
+  value: {}
 }
 
 const reducer = (state = obj, action) => {
   switch (action.type) {
     case 'API_GET':
-    case 'API_DEL':
-      return Object.assign({}, state, {
-          value: action.value
-      });
+      return state;
 
     case 'API_RECEIVE':
       return Object.assign({}, state, {
-          value: action.value.name
+          value: action.payload
       });
 
     default:

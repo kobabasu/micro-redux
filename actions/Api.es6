@@ -1,48 +1,21 @@
 import fetch from 'isomorphic-fetch'
-import { init } from '../lib/Fetch'
 
 const URL = '/admin/api/users/';
 
 // actions
-export const GET = 'API_GET';
-export const DEL = 'API_DEL';
-export const RECEIVE = 'API_RECEIVE';
+export const API_GET = 'API_GET';
+export const API_RECEIVE = 'API_RECEIVE';
 
 // action creators
-export const get = (value) => {
+export const get = () => {
   return {
-    type: GET,
-    value
+    type: API_GET
   }; 
-};
-
-export const del = (id) => {
-  return {
-    type: DEL,
-    id
-  };
 };
 
 export const receive = (value) => {
   return {
-    type: RECEIVE,
-    value
+    type: API_RECEIVE,
+    payload: value
   }; 
-};
-
-// private
-const _get = () => (dispatch) => {
-  return fetch(URL, init.GET() )
-    .then((response) => response.json() )
-    .then((json) => {
-      dispatch(receive(json));
-    })
-};
-
-const _del = (id) => (dispatch) => {
-  return fetch(URL, init.DELETE({ id: id }) )
-    .then((response) => response.json() )
-    .then((json) => {
-      dispatch(_get());
-    })
 };
