@@ -8,7 +8,7 @@ export default class Pixi extends React.Component {
   constructor(props) {
     super(props);
     this.title = 'Pixi';
-    this.md = 'local_movies';
+    this.md = 'movie';
   }
 
   componentDidMount() {

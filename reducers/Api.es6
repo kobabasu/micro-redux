@@ -1,22 +1,17 @@
-import ES6ObjectAssign from 'es6-object-assign'
-ES6ObjectAssign.polyfill();
 import '../actions/Api'
 
 const obj = {
-  value: null
+  value: {}
 }
 
 const reducer = (state = obj, action) => {
   switch (action.type) {
-    case 'GET':
-    case 'DEL':
-      return Object.assign({}, state, {
-          value: action.value
-      });
+    case 'API_GET':
+      return state;
 
-    case 'RECEIVE':
+    case 'API_RECEIVE':
       return Object.assign({}, state, {
-          value: action.value.name
+          value: action.payload
       });
 
     default:

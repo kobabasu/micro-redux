@@ -16,7 +16,7 @@ export default class Home extends React.Component {
       <article id="Home">
         <DocumentTitle title={this.title} />
         <h1>
-          <i className="material-icons md-36">{this.md}</i>
+          <i className={"zmdi zmdi-"+this.md}></i>
           {this.title}
         </h1>
 
