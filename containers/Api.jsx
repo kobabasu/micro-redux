@@ -4,9 +4,6 @@ import * as actions from '../actions/Api'
 
 class Api extends React.Component {
 
-  componentDidMount() {
-  }
-
   render() {
     return(
       <div>
@@ -31,13 +28,10 @@ class Api extends React.Component {
     e.preventDefault();
     this.props.get();
   }
-
-  del(e) {
-    this.props.del(e.target.id);
-  }
 }
 
 Api.propTypes = {
+  api: React.PropTypes.object.isRequired,
   get: React.PropTypes.func.isRequired
 };
 

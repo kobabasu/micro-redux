@@ -1,6 +1,6 @@
 import fetch from 'isomorphic-fetch'
 
-const URL = '/admin/api/users/';
+export const URL = '/admin/api/users/';
 
 // actions
 export const API_GET = 'API_GET';
