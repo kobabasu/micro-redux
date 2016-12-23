@@ -32,6 +32,7 @@
     "isomorphic-fetch": "*",
     "react": "*",
     "react-dom": "*",
+    "react-addons-test-utils": "*",
     "react-router": "*",
     "react-document-title": "*",
     "redux": "*",
