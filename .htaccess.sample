@@ -1,10 +1,6 @@
 #
 # specific version for CPI
 #
-# for ACE01 2011
-# AddHandler x-httpd-php559 .php
-# suPHP_ConfigPath /usr/home/aa120v5xup/html/api/
-#
 # for ACE01 2015
 # Options +SymLinksIfOwnerMatch
 # RewriteEngine on
@@ -51,7 +47,7 @@
 # </Files>
 
 #
-# setting for Slim
+# setting for react
 #
 <ifModule mod_rewrite.c>
   RewriteEngine On
